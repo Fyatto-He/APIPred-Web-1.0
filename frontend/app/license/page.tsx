@@ -1,12 +1,21 @@
 // License page — CC BY-NC-SA 4.0, plus citation info.
-// Update the citation refs in the CITATIONS array below when a new
-// paper is published or the preprint is updated.
+// Update the citation refs in the arrays below when a new paper is
+// published or the preprint is updated.
 
 export const metadata = { title: "License" };
 
-const CITATIONS: string[] = [
+// Citations for the APIPred Web project itself.
+const APIPRED_CITATIONS: string[] = [
   "Fang Z, Wu Z, Wu X, Chen S, Wang X, Umrao S, Dwivedy A. APIPred: An XGBoost-Based Method for Predicting Aptamer-Protein Interactions. J Chem Inf Model. 2024 Apr 8;64(7):2290-2301. doi: 10.1021/acs.jcim.3c00713. Epub 2023 Dec 21. PMID: 38127053; PMCID: PMC11001522.",
   "Catherine Zhang, Juncheng He, Dhanush Gandavadi, Chau Nguyen Minh Hoang, Hyeongjun Cho, Minjun Son, Xing Wang, Abhisek Dwivedy, Saurabh Umrao. bioRxiv 2025.12.31.697194; doi: https://doi.org/10.64898/2025.12.31.697194",
+];
+
+// Citations requested by third-party dependencies used at runtime.
+// Users of APIPred Web whose downstream work involves the reported RNA
+// / DNA folding output should include these in addition to the above.
+const VIENNARNA_CITATIONS: string[] = [
+  "Lorenz R, Bernhart S.H., Höner zu Siederdissen C, Tafer H, Flamm C, Stadler P.F., Hofacker I.L. ViennaRNA Package 2.0. Algorithms for Molecular Biology, 6:26 (2011).",
+  "Hofacker I.L. Fast folding and comparison of RNA secondary structures. Monatshefte für Chemie, 125(2):167-188 (1994).",
 ];
 
 export default function LicensePage() {
@@ -66,12 +75,47 @@ export default function LicensePage() {
       </section>
 
       <section className="bg-white border border-gray-200 rounded-md p-6 text-sm text-gray-700 leading-relaxed space-y-3">
+        <h2 className="text-lg font-semibold text-gray-900">
+          Third-party software
+        </h2>
+        <p>
+          APIPred Web includes and depends on the{" "}
+          <a
+            href="https://www.tbi.univie.ac.at/RNA/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline"
+          >
+            ViennaRNA Package
+          </a>
+          , developed by the Institute for Theoretical Chemistry, University of
+          Vienna. ViennaRNA is redistributed here under its own license
+          (see <code className="bg-gray-100 px-1 rounded">
+            ViennaRNA-master/license.txt
+          </code>{" "}
+          in the repository); proper credit belongs to the ViennaRNA authors
+          and the Institute for Theoretical Chemistry.
+        </p>
+      </section>
+
+      <section className="bg-white border border-gray-200 rounded-md p-6 text-sm text-gray-700 leading-relaxed space-y-3">
         <h2 className="text-lg font-semibold text-gray-900">Citation</h2>
         <p>
           If you used APIPred Web 1.0 for your research, please cite:
         </p>
         <ol className="list-decimal pl-6 space-y-3">
-          {CITATIONS.map((c, i) => (
+          {APIPRED_CITATIONS.map((c, i) => (
+            <li key={i} className="leading-relaxed">
+              {c}
+            </li>
+          ))}
+        </ol>
+        <p className="pt-2">
+          If your work also uses the RNA / DNA folding output produced by
+          APIPred Web, please additionally cite the ViennaRNA package:
+        </p>
+        <ol className="list-decimal pl-6 space-y-3">
+          {VIENNARNA_CITATIONS.map((c, i) => (
             <li key={i} className="leading-relaxed">
               {c}
             </li>
