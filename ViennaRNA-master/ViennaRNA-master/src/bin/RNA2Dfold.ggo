@@ -1,0 +1,206 @@
+# Name of your program
+package "RNA2Dfold" # don't use package if you're using automake
+purpose "Compute MFE structure, partition function and representative sample structures of k,l neighborhoods"
+
+# Version of your program
+#version "0.9"   # don't use version if you're using automake
+
+
+# command line options passed to gengetopt
+args "--file-name=RNA2Dfold_cmdl --include-getopt --default-optional --func-name=RNA2Dfold_cmdline_parser --arg-struct-name=RNA2Dfold_args_info"
+
+description "The program partitions the secondary structure space into (basepair)distance classes according to\
+ two fixed reference structures. It expects a sequence and two secondary structures in dot-bracket notation as\
+ its inputs. For each distance class, the MFE representative, Boltzmann probabilities and Gibbs free energy is\
+ computed. Additionally, a stochastic backtracking routine allows one to produce samples of representative suboptimal\
+ secondary structures from each partition\n\n"
+
+
+# Options
+
+option  "verbose" v
+"Be verbose.\n"
+details="Lower the log level setting such that even INFO messages are passed through.\n\n"
+flag
+off
+
+
+section "I/O Options"
+sectiondesc="Command line options for input and output (pre-)processing\n\n"
+
+option  "numThreads"  j
+"Set the number of threads used for calculations (only available when compiled with OpenMP support)\n\n"
+int
+optional
+
+option  "noconv"  -
+"Do not automatically substitute nucleotide \"T\" with \"U\".\n\n"
+flag
+off
+
+
+option  "log-level" -
+"Set log level threshold.\n"
+details="By default, any log messages are filtered such that only warnings (level 2) or errors (level 3)\
+ are printed. This setting allows for specifying the log level threshold, where higher values result in\
+ fewer information. Log-level 5 turns off all messages, even errors and other critical information.\n\n"
+int
+typestr="level"
+default="2"
+hidden
+
+
+option  "log-file" -
+"Print log messages to a file instead of stderr.\n"
+string
+typestr="filename"
+default="RNA2Dfold.log"
+argoptional
+hidden
+
+
+option  "log-time" -
+"Include time stamp in log messages.\n\n"
+flag
+off
+hidden
+
+
+option  "log-call" -
+"Include file and line of log calling function.\n\n"
+flag
+off
+hidden
+
+
+section "Algorithms"
+sectiondesc="Select additional algorithms which should be included in the calculations.\nThe Minimum free energy\
+ (MFE) and a structure representative are calculated in any case.\n\n"
+
+option  "partfunc"  p
+"calculate partition function and thus, Boltzmann probabilities and Gibbs free energy\n\n"
+flag
+off
+
+option  "stochBT" -
+"backtrack a certain number of Boltzmann samples from the appropriate k,l neighborhood(s)\n\n"
+int
+optional
+
+option  "neighborhood"  -
+"backtrack structures from certain k,l-neighborhood only, can be specified multiple times (<k>:<l>,<m>:<n>,...)\n\n"
+string
+typestr="<k>:<l>"
+multiple
+dependon="stochBT"
+
+option  "maxDist1"  K
+"maximum distance to first reference structure"
+details="If this value is set all structures that exhibit a basepair distance greater than maxDist1 will\
+ be thrown into a distance class denoted by K=L=-1\n\n"
+int
+optional
+
+option  "maxDist2"  L
+"maximum distance to second reference structure"
+details="If this value is set all structures that exhibit a basepair distance greater than maxDist1 will\
+ be thrown into a distance class denoted by K=L=-1\n\n"
+int 
+
+option  "pfScale" S
+"In the calculation of the pf use scale*mfe as an estimate for the ensemble free energy (used to avoid\
+ overflows).\n"
+details="The default is 1.07, useful values are 1.0 to 1.2. Occasionally needed for long sequences.\n\n"
+double
+default="1.07"
+optional
+hidden
+
+option  "noBT"  -
+"do not backtrack structures, calculate energy contributions only\n\n"
+flag
+off
+
+option  "circ"    c
+"Assume a circular (instead of linear) RNA molecule.\n\n"
+flag
+off
+
+
+
+section "Energy Parameters"
+sectiondesc="Energy parameter sets can be adapted or loaded from user-provided input files\n\n"
+
+option  "temp"  T
+"Rescale energy parameters to a temperature of temp C. Default is 37C.\n\n"
+double
+default="37.0"
+optional
+
+option  "paramFile" P
+"Read energy parameters from paramfile, instead of using the default parameter set.\n"
+details="Different sets of energy parameters for RNA and DNA should accompany your distribution.\nSee the\
+ RNAlib documentation for details on the file format. The placeholder file name 'DNA' can be used\
+ to load DNA parameters without the need to actually specify any input file.\n\n"
+string
+typestr="paramfile"
+optional
+
+option  "noTetra" 4
+"Do not include special tabulated stabilizing energies for tri-, tetra- and hexaloop hairpins.\n"
+details="Mostly for testing.\n\n"
+flag
+off
+hidden
+
+option  "salt" -
+"Set salt concentration in molar (M). Default is 1.021M.\n\n"
+double
+optional
+
+
+section "Model Details"
+sectiondesc="Tweak the energy model and pairing rules additionally using the following parameters\n\n"
+
+option  "dangles" d
+"How to treat \"dangling end\" energies for bases adjacent to helices in free ends and multi-loops\n"
+details="\nWith -d2 dangling energies will be added for the bases adjacent to a helix on both sides\
+ in any case. The option -d0 ignores dangling ends altogether (mostly for debugging).\n\n"
+int
+default="2"
+values="0","2"
+optional
+
+option  "noGU"  -
+"Do not allow GU pairs.\n\n"
+flag
+off
+hidden
+
+option  "noClosingGU" -
+"Do not allow GU pairs at the end of helices.\n\n"
+flag
+off
+hidden
+
+option  "helical-rise"  -
+"Set the helical rise of the helix in units of Angstrom.\n"
+details="Use with caution! This value will be re-set automatically to 3.4 in case DNA\
+ parameters are loaded via -P DNA and no further value is provided.\n\n"
+float
+optional
+default="2.8"
+hidden
+
+option  "backbone-length"  -
+"Set the average backbone length for looped regions in units of Angstrom.\n"
+details="Use with caution! This value will be re-set automatically to 6.76 in case DNA\
+ parameters are loaded via -P DNA and no further value is provided.\n\n"
+float
+optional
+default="6.0"
+hidden
+
+
+text    "\nIf in doubt our program is right, nature is at fault.\nComments should be sent to\
+ rna@tbi.univie.ac.at.\n\n"

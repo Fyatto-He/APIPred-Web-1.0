@@ -1,0 +1,63 @@
+# Name of your program
+package "ct2db" # don't use package if you're using automake
+purpose "Produce dot bracket notation of an RNA secondary structure from Zuker's .ct file"
+
+usage "ct2db [OPTIONS] [<input0.ct>] [<input1.ct>]..."
+
+# Version of your program
+version "1.0"   # don't use version if you're using automake
+
+
+# command line options passed to gengetopt
+args "--file-name=ct2db_cmdl --unamed-opts --include-getopt --default-optional --func-name=ct2db_cmdline_parser --arg-struct-name=ct2db_args_info"
+
+description "This program converts connectivity table (.ct) files into extended FASTA format with dot-bracket string.\n"
+
+option  "no-pk"  p
+"Remove pseudoknots from structure\n\n"
+flag
+off
+
+option  "no-modified"  m
+"Do not keep modified bases, i.e. replace all non-canonical nucleotides with N.\n\n"
+flag
+off
+
+option  "verbose"   v
+"Be verbose.\n\n"
+flag
+off
+
+
+option  "log-level" -
+"Set log level threshold.\n"
+details="By default, any log messages are filtered such that only warnings (level 2) or errors (level 3)\
+ are printed. This setting allows for specifying the log level threshold, where higher values result in\
+ fewer information. Log-level 5 turns off all messages, even errors and other critical information.\n\n"
+int
+typestr="level"
+default="2"
+hidden
+
+
+option  "log-file" -
+"Print log messages to a file instead of stderr.\n"
+string
+typestr="filename"
+default="ct2db.log"
+argoptional
+hidden
+
+
+option  "log-time" -
+"Include time stamp in log messages.\n\n"
+flag
+off
+hidden
+
+
+option  "log-call" -
+"Include file and line of log calling function.\n\n"
+flag
+off
+hidden

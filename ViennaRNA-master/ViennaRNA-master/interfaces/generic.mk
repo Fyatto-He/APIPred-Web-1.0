@@ -1,0 +1,53 @@
+SWIG_main_src = $(srcdir)/../RNA.i
+
+SWIG_tmaps = \
+  $(srcdir)/../ptr2array.i
+
+SWIG_misc_src = \
+  $(srcdir)/../aln_utils.i \
+  $(srcdir)/../backtrack.i \
+  $(srcdir)/../basic_algorithms.i \
+  $(srcdir)/../boltzmann_sampling.i \
+  $(srcdir)/../combinatorics.i \
+  $(srcdir)/../compare.i \
+  $(srcdir)/../commands.i \
+  $(srcdir)/../constraints.i \
+  $(srcdir)/../constraints_hard.i \
+  $(srcdir)/../constraints_soft.i \
+  $(srcdir)/../constraints_ligand.i \
+  $(srcdir)/../constraints_mod.i \
+  $(srcdir)/../probing.i \
+  $(srcdir)/../probing_SHAPE.i \
+  $(srcdir)/../data_structures.i \
+  $(srcdir)/../dp_matrices.i \
+  $(srcdir)/../duplex.i \
+  $(srcdir)/../eval.i \
+  $(srcdir)/../file_formats.i \
+  $(srcdir)/../fold_compound.i \
+  $(srcdir)/../grammar.i \
+  $(srcdir)/../inverse.i \
+  $(srcdir)/../loops.i \
+  $(srcdir)/../mfe.i \
+  $(srcdir)/../mfe_window.i \
+  $(srcdir)/../model_details.i \
+  $(srcdir)/../move.i \
+  $(srcdir)/../neighbor.i \
+  $(srcdir)/../params.i \
+  $(srcdir)/../part_func.i \
+  $(srcdir)/../paths.i \
+  $(srcdir)/../pf_window.i \
+  $(srcdir)/../plotting.i \
+  $(srcdir)/../sequence.i \
+  $(srcdir)/../subopt.i \
+  $(srcdir)/../structure_utils.i \
+  $(srcdir)/../type_checks.i \
+  $(srcdir)/../utils.i \
+  $(srcdir)/../var_arrays.i \
+  $(srcdir)/../walk.i \
+  $(builddir)/../parameter_sets.i
+
+SWIG_module_name = RNA
+
+SWIG_wrapper = RNA_wrap.cpp
+
+SWIG_src = $(SWIG_main_src) $(SWIG_misc_src) $(SWIG_tmaps)

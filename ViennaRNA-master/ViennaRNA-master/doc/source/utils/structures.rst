@@ -1,0 +1,23 @@
+Secondary Structure Utilities
+=============================
+
+Functions to create, parse, convert, manipulate, and compare secondary
+structure representations.
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Specialized Modules:
+
+   struct/dotbracket
+   struct/wuss
+   struct/pairtable
+   struct/plist
+   struct/abstract_shapes
+   struct/helix_list
+   struct/trees
+   struct/metrics
+   struct/benchmark
+   struct/deprecated
+
+.. doxygengroup:: struct_utils
+    :no-title:

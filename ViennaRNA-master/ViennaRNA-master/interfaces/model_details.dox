@@ -1,0 +1,21 @@
+/**
+
+@struct vrna_md_s
+@scripting
+@parblock
+This data structure is wrapped as an object @p md with multiple related functions attached as methods.
+
+A new set of default parameters can be obtained by calling the constructure of
+@p md:<br>
+  - @p md() -- Initialize with default settings
+
+The resulting object has a list of attached methods which directly correspond to
+functions that mainly operate on the corresponding @em C data structure:<br>
+  - @p reset() - vrna_md_set_default()
+  - @p set_from_globals() - set_model_details()
+  - @p option_string() - vrna_md_option_string()
+
+
+@endparblock
+
+*/

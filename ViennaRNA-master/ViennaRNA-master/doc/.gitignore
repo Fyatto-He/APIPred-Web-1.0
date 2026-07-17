@@ -1,0 +1,8 @@
+# ignore configure script generated content
+source/conf.py
+source/install.rst
+
+# ignore doxygen output
+build
+*.pdf
+refman-html

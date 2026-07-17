@@ -1,0 +1,6 @@
+RNA/
+RNA_wrap.*
+RNA.py
+version.i
+documentation.i
+*.so

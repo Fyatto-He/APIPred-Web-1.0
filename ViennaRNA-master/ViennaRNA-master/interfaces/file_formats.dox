@@ -1,0 +1,46 @@
+/**
+
+@fn unsigned int vrna_file_msa_detect_format(const char *filename, unsigned int options)
+@scripting
+@parblock
+This function exists as an overloaded version where the @p options parameter may be omitted!
+In that case, the @p options parameter defaults to #VRNA_FILE_FORMAT_MSA_DEFAULT. See, e.g.
+@rstinline :py:func:`RNA.file_msa_detect_format()` in the :doc:`/api_python` @endrst.
+@endparblock
+
+
+@fn int vrna_file_msa_read(const char *filename, char ***names, char ***aln, char **id, char **structure, unsigned int options)
+@scripting
+@parblock
+In the target scripting language, only the first and last argument, @p filename and @p options,
+are passed to the corresponding function. The other arguments, which serve as output in the
+C-library, are available as additional return values.
+This function exists as an overloaded version where the @p options parameter may be omitted!
+In that case, the @p options parameter defaults to #VRNA_FILE_FORMAT_MSA_STOCKHOLM. See, e.g.
+@rstinline :py:func:`RNA.file_msa_read()` in the :doc:`/api_python` @endrst and
+@rstinline :ref:`examples/python:parsing alignments` @endrst in the Python examples.
+@endparblock
+
+
+@fn int vrna_file_msa_read_record(FILE *fp, char ***names, char ***aln, char **id, char **structure, unsigned int options)
+@scripting
+@parblock
+In the target scripting language, only the first and last argument, @p fp and @p options,
+are passed to the corresponding function. The other arguments, which serve as output in the
+C-library, are available as additional return values.
+This function exists as an overloaded version where the @p options parameter may be omitted!
+In that case, the @p options parameter defaults to #VRNA_FILE_FORMAT_MSA_STOCKHOLM. See, e.g.
+@rstinline :py:func:`RNA.file_msa_read_record()` in the :doc:`/api_python` @endrst and
+@rstinline :ref:`examples/python:parsing alignments` @endrst in the Python examples.
+@endparblock
+
+
+@fn int vrna_file_msa_write(const char *filename, const char **names, const char **aln, const char *id, const char *structure, const char *source, unsigned int options)
+@scripting
+@parblock
+In the target scripting language, this function exists as a set of overloaded versions,
+where the last four parameters may be omitted. If the @p options parameter is missing the
+options default to (#VRNA_FILE_FORMAT_MSA_STOCKHOLM | #VRNA_FILE_FORMAT_MSA_APPEND). See, e.g.
+@rstinline :py:func:`RNA.file_msa_write()` in the :doc:`/api_python` @endrst.
+@endparblock
+*/

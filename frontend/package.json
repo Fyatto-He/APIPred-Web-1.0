@@ -1,0 +1,31 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p ${PORT:-80}",
+    "build": "next build",
+    "start": "next start -p ${PORT:-80}",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@vitejs/plugin-rsc": "^0.5.6",
+    "axios": "^1.8.3",
+    "fornac": "^1.1.8",
+    "next": "^15.3.6",
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1",
+    "react-server-dom-parcel": "^19.2.1",
+    "react-server-dom-webpack": "^19.2.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.1.4",
+    "typescript": "^5"
+  }
+}

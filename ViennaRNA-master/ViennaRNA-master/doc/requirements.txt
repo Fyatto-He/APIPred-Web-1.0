@@ -1,0 +1,6 @@
+sphinx<7
+sphinx-multiproject
+myst-parser
+sphinx-copybutton
+sphinxcontrib-bibtex
+sphinx-rtd-theme

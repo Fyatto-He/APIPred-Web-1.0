@@ -1,0 +1,15 @@
+*.o
+kinwalker
+kinwalker.exe
+
+.deps
+config.h*
+Makefile
+Makefile.in
+aclocal.m4
+autom4te.cache/
+config.log
+config.status
+configure
+stamp-h1
+config/

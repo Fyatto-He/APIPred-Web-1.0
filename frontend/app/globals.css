@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* Dark-mode media query removed: the UI uses hardcoded white / light-purple
+   panels (bg-white, bg-gray-50, etc.), so when the OS reported dark mode the
+   body color was flipped to #ededed and form inputs inherited that near-white
+   color, rendering as almost-invisible light grey on white backgrounds.
+   Re-add a dark-mode block only when panel backgrounds are updated too. */
+
+/* Aptamer background used site-wide (previously only on /predict). */
+body {
+  background-color: rgb(245, 240, 255);      /* light purple fallback */
+  background-image: url('/images/background.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;              /* keep image steady while scrolling */
+  background-blend-mode: overlay;
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+/* Force dark text inside form controls regardless of OS color scheme, so
+   input values are always readable on the app's light panels. */
+input,
+textarea,
+select {
+  color: #171717;
+}
+input::placeholder,
+textarea::placeholder {
+  color: #9ca3af; /* Tailwind gray-400 — visibly muted but still legible */
+}

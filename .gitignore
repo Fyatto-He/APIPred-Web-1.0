@@ -1,0 +1,63 @@
+# ─── Python ────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments (any name)
+env/
+venv/
+.venv/
+env-*/
+env‑windows-backup/
+
+# ─── Node / Next.js ────────────────────────────────────────────────────
+node_modules/
+frontend/.next/
+frontend/tsconfig.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# ─── OS / editor cruft ─────────────────────────────────────────────────
+.DS_Store
+._*
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ─── Local session / secrets ───────────────────────────────────────────
+.claude/
+.env
+.env.local
+.env.*.local
+
+# ─── Databases (created at runtime, contain user job data) ─────────────
+*.db
+*.sqlite
+*.sqlite3
+backend/database/results.db
+aptamers.db
+
+# ─── Regeneratable data + build artifacts ──────────────────────────────
+# 113 MB — regenerate with backend/database/seq_gen_121612.py
+backend/database/gene_sequences12-16-12.txt
+
+# ─── Backup / temporary files created during dev ───────────────────────
+*.bak
+*.bak_before_*
+*.orig
+*.rej
+
+# ─── Never permit these under any name (attacker artifacts previously
+#     seen in this project's history — belt-and-suspenders) ────────────
+xmrig*/
+xmrig*
+sex.sh
+kal.tar.gz
+*hashvault*

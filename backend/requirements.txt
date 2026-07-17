@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+numpy
+pandas
+scipy
+scikit-learn
+requests
+xgboost
+repDNA
+tqdm
+sqlalchemy
+RNA
+viennarna
+pydantic[email]
