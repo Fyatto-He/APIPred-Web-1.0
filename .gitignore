@@ -61,3 +61,7 @@ xmrig*
 sex.sh
 kal.tar.gz
 *hashvault*
+
+# Runtime screen logs (rotated by logrotate; see /etc/logrotate.d/apipred)
+*.screen.log
+*.screen.log.*
