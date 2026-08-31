@@ -76,6 +76,8 @@ origins = [
     "http://localhost:3000",    # if you ever run on :3000
     "http://141.142.220.151",   # your VM's HTTP
     "https://141.142.220.151",  # if you use TLS
+    "https://apipred.ncsa.illinois.edu",  # production hostname (HTTPS)
+    "http://apipred.ncsa.illinois.edu",   # redirected to HTTPS, but allow for safety
     # …or just "*" for quick testing (not recommended long‑term)
 ]
 
@@ -1519,7 +1521,7 @@ atexit.register(cleanup_global_resources)
 # or to use product mode:
 # npm run build 
 # npm start
-# http://141.142.220.151
+# https://141.142.220.151
 
 
 

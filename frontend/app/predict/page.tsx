@@ -877,7 +877,8 @@ export default function Home() {
     try {
       const body: PredictionFormData = {
         amino_acid_sequence: sequence,
-        variant_length: variantLength
+        variant_length: variantLength,
+        total_length: totalLength
       };
       
       // Set total_length based on the mode
@@ -1224,12 +1225,13 @@ export default function Home() {
             <button
               type="submit"
               className="font-semibold py-2 rounded-md"
-              style={{ 
-                backgroundColor: "rgb(120, 40, 160)", 
+              style={{
+                backgroundColor: "rgb(120, 40, 160)",
                 color: "white",
                 transition: "background-color 0.2s ease",
-                ":hover": { backgroundColor: "rgb(100, 30, 140)" }
               }}
+              onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = "rgb(100, 30, 140)"; }}
+              onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = "rgb(120, 40, 160)"; }}
               disabled={loading || !!lengthError || !!sequenceError}
             >
               {loading ? "Processing..." : "Predict"}

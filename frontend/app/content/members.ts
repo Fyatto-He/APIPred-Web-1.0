@@ -21,6 +21,7 @@ export const members: Member[] = [
     name: "Xing Wang",
     role: "Principal Investigator",
     email: "xingw@illinois.edu",
+    website: "https://bioengineering.illinois.edu/people/xingw",
     image: "/images/members/xing.jpg",
   },
   {
@@ -28,6 +29,7 @@ export const members: Member[] = [
     role: "Principal Investigator",
     email: "abhisekdwivedyillinois@gmail.com",
     website: "https://abhisekdwivedy.wixsite.com/abhisekdwivedy",
+    github: "https://github.com/abhisekdwivedy",
     image: "/images/members/abhisek.jpg",
   },
   {
