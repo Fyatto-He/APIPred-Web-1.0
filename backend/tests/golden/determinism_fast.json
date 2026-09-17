@@ -1,0 +1,186 @@
+{
+  "query": "ACDEFGHIKLMNPQRSTVWYACDEFGHIKLMNPQRSTVWY",
+  "prefix": "ATAACTGGTCT",
+  "suffix": "TCCTTACGTAT",
+  "variant_length": 8,
+  "total_length": 30,
+  "exhaustive_search": true,
+  "valid_sequences_found": 2120,
+  "predictions": [
+    {
+      "gene_sequence": "ATAACTGGTCTCAGCCGCCTCCTTACGTAT",
+      "variant_part": "CAGCCGCC",
+      "interaction_probability": 0.9800697565078735,
+      "structure": "....(((....)))................",
+      "mfe": -1.2000000476837158
+    },
+    {
+      "gene_sequence": "ATAACTGGTCTCAGCCGCGTCCTTACGTAT",
+      "variant_part": "CAGCCGCG",
+      "interaction_probability": 0.9800697565078735,
+      "structure": "....(((....)))...(((....)))...",
+      "mfe": -2.799999952316284
+    },
+    {
+      "gene_sequence": "ATAACTGGTCTCAGCCGGCTCCTTACGTAT",
+      "variant_part": "CAGCCGGC",
+      "interaction_probability": 0.9800697565078735,
+      "structure": "....(((....)))................",
+      "mfe": -1.2000000476837158
+    },
+    {
+      "gene_sequence": "ATAACTGGTCTCAGCCGGGTCCTTACGTAT",
+      "variant_part": "CAGCCGGG",
+      "interaction_probability": 0.9800697565078735,
+      "structure": "....(((....)))................",
+      "mfe": -1.2000000476837158
+    },
+    {
+      "gene_sequence": "ATAACTGGTCTCAGCGCCGTCCTTACGTAT",
+      "variant_part": "CAGCGCCG",
+      "interaction_probability": 0.9800697565078735,
+      "structure": "....(((....)))...(((....)))...",
+      "mfe": -2.5
+    },
+    {
+      "gene_sequence": "ATAACTGGTCTGCCCAGCGTCCTTACGTAT",
+      "variant_part": "GCCCAGCG",
+      "interaction_probability": 0.9534431099891663,
+      "structure": "....((((.....))))(((....)))...",
+      "mfe": -4.300000190734863
+    },
+    {
+      "gene_sequence": "ATAACTGGTCTGCCAGCCCTCCTTACGTAT",
+      "variant_part": "GCCAGCCC",
+      "interaction_probability": 0.9534431099891663,
+      "structure": "....((((....))))..............",
+      "mfe": -3.0999999046325684
+    },
+    {
+      "gene_sequence": "ATAACTGGTCTGCCAGCGCTCCTTACGTAT",
+      "variant_part": "GCCAGCGC",
+      "interaction_probability": 0.9534431099891663,
+      "structure": "....((((....))))..............",
+      "mfe": -3.0999999046325684
+    },
+    {
+      "gene_sequence": "ATAACTGGTCTGCCAGCGGTCCTTACGTAT",
+      "variant_part": "GCCAGCGG",
+      "interaction_probability": 0.9534431099891663,
+      "structure": "....((((....))))..............",
+      "mfe": -3.0999999046325684
+    },
+    {
+      "gene_sequence": "ATAACTGGTCTGCGCCAGCTCCTTACGTAT",
+      "variant_part": "GCGCCAGC",
+      "interaction_probability": 0.9534431099891663,
+      "structure": "....(((((....)))))............",
+      "mfe": -3.0
+    },
+    {
+      "gene_sequence": "ATAACTGGTCTGCGCAGCCTCCTTACGTAT",
+      "variant_part": "GCGCAGCC",
+      "interaction_probability": 0.9534431099891663,
+      "structure": "....(((.......))).............",
+      "mfe": -0.6000000238418579
+    },
+    {
+      "gene_sequence": "ATAACTGGTCTGCGCAGCGTCCTTACGTAT",
+      "variant_part": "GCGCAGCG",
+      "interaction_probability": 0.9534431099891663,
+      "structure": "....(((.......)))(((....)))...",
+      "mfe": -2.200000047683716
+    },
+    {
+      "gene_sequence": "ATAACTGGTCTGCGGCAGCTCCTTACGTAT",
+      "variant_part": "GCGGCAGC",
+      "interaction_probability": 0.9534431099891663,
+      "structure": "....(((.(....).)))............",
+      "mfe": -1.7999999523162842
+    },
+    {
+      "gene_sequence": "ATAACTGGTCTGCAGCCCCTCCTTACGTAT",
+      "variant_part": "GCAGCCCC",
+      "interaction_probability": 0.9534431099891663,
+      "structure": "....(((.....)))...............",
+      "mfe": -1.2999999523162842
+    },
+    {
+      "gene_sequence": "ATAACTGGTCTGCAGCCCGTCCTTACGTAT",
+      "variant_part": "GCAGCCCG",
+      "interaction_probability": 0.9534431099891663,
+      "structure": "....(((.....)))..(((....)))...",
+      "mfe": -2.5999999046325684
+    },
+    {
+      "gene_sequence": "ATAACTGGTCTGCAGCGCCTCCTTACGTAT",
+      "variant_part": "GCAGCGCC",
+      "interaction_probability": 0.9534431099891663,
+      "structure": "....(((.....)))...............",
+      "mfe": -1.2999999523162842
+    },
+    {
+      "gene_sequence": "ATAACTGGTCTGCAGCGCGTCCTTACGTAT",
+      "variant_part": "GCAGCGCG",
+      "interaction_probability": 0.9534431099891663,
+      "structure": "....(((.....)))..(((....)))...",
+      "mfe": -2.9000000953674316
+    },
+    {
+      "gene_sequence": "ATAACTGGTCTGCAGCGGCTCCTTACGTAT",
+      "variant_part": "GCAGCGGC",
+      "interaction_probability": 0.9534431099891663,
+      "structure": "....(((.....)))...............",
+      "mfe": -1.2999999523162842
+    },
+    {
+      "gene_sequence": "ATAACTGGTCTGCAGCGGGTCCTTACGTAT",
+      "variant_part": "GCAGCGGG",
+      "interaction_probability": 0.9534431099891663,
+      "structure": "....(((.....)))...............",
+      "mfe": -1.2999999523162842
+    },
+    {
+      "gene_sequence": "ATAACTGGTCTGGCCCAGCTCCTTACGTAT",
+      "variant_part": "GGCCCAGC",
+      "interaction_probability": 0.9534431099891663,
+      "structure": "....((((......))))............",
+      "mfe": -2.0
+    },
+    {
+      "gene_sequence": "ATAACTGGTCTGGCCAGCCTCCTTACGTAT",
+      "variant_part": "GGCCAGCC",
+      "interaction_probability": 0.9534431099891663,
+      "structure": "....((((.....)))).............",
+      "mfe": -3.0
+    },
+    {
+      "gene_sequence": "ATAACTGGTCTGGCCAGCGTCCTTACGTAT",
+      "variant_part": "GGCCAGCG",
+      "interaction_probability": 0.9534431099891663,
+      "structure": "....((((.....))))(((....)))...",
+      "mfe": -4.599999904632568
+    },
+    {
+      "gene_sequence": "ATAACTGGTCTGGCGCAGCTCCTTACGTAT",
+      "variant_part": "GGCGCAGC",
+      "interaction_probability": 0.9534431099891663,
+      "structure": "....(((........)))............",
+      "mfe": -0.6000000238418579
+    },
+    {
+      "gene_sequence": "ATAACTGGTCTGGCAGCCCTCCTTACGTAT",
+      "variant_part": "GGCAGCCC",
+      "interaction_probability": 0.9534431099891663,
+      "structure": "....(((......)))..............",
+      "mfe": -0.6000000238418579
+    },
+    {
+      "gene_sequence": "ATAACTGGTCTGGCAGCGCTCCTTACGTAT",
+      "variant_part": "GGCAGCGC",
+      "interaction_probability": 0.9534431099891663,
+      "structure": "....(((......)))..............",
+      "mfe": -0.6000000238418579
+    }
+  ]
+}

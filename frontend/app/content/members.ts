@@ -44,12 +44,14 @@ export const members: Member[] = [
     name: "Catherine Zhang",
     role: "Main Developer",
     email: "catherinezhang1717@gmail.com",
-    // image: "/images/members/catherine.jpg",
+    github: "https://github.com/catherinezhang1717",
+    image: "/images/members/catherine.jpg",
   },
   {
     name: "Henry He",
     role: "Main Developer",
     email: "fyattohe12@gmail.com",
-    // image: "/images/members/henry.jpg",
+    github: "https://github.com/Fyatto-He",
+    image: "/images/members/henry.jpg",
   },
 ];
